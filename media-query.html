@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Media Query</title>
+    <style>
+        @font-face {
+            font-family: snow;
+            src: url('/assets/fonts/SnowtopCaps.otf');
+        }
+
+        @media (min-width: 320px) and (max-width: 375px) {
+            body {
+                background-color: green;
+                color: white;
+                font-family: snow, Arial, Helvetica, sans-serif;
+            }
+
+            h1 {
+                display: none;
+            }
+        }
+
+        @media (width: 768px) {
+            body {
+                background-color: red;
+                color: white;
+            }
+        }
+
+        @media (width: 425px) {
+            body {
+                background-color: orange;
+                color: white;
+            }
+        }
+
+        a {
+                background-color: rgb(117, 97, 229);
+                color: #fff;
+                font-family: snow, Arial, Helvetica, sans-serif;
+                border-radius: 0.5em;
+            }
+
+            a:active {
+                background-color: rgb(71, 44, 225);
+                color: #fff;
+                font-family: snow, Arial, Helvetica, sans-serif;
+                border-radius: 0.5em;
+                animation: rotate-center 0.6s ease-in-out both
+            }
+
+            @-webkit-keyframes rotate-center {
+                0% {
+                    -webkit-transform: rotate(0);
+                    transform: rotate(0);
+                }
+
+                100% {
+                    -webkit-transform: rotate(360deg);
+                    transform: rotate(360deg);
+                }
+            }
+
+            @keyframes rotate-center {
+                0% {
+                    -webkit-transform: rotate(0);
+                    transform: rotate(0);
+                }
+
+                100% {
+                    -webkit-transform: rotate(360deg);
+                    transform: rotate(360deg);
+                }
+            }
+    </style>
+</head>
+
+<body>
+    <h1>Media Query</h1>
+    <a href="#">Click</a>
+</body>
+
+</html>

@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="assets/css/style.css">
+    <style>
+        /* Pseudo Class 
+        selector:pseudoclassfunction {
+            property: value;
+        }
+        */
+
+        a:link {
+            color: #289631;
+            font-weight: bold;
+        }
+
+        a:visited {
+            color: #07076b;
+            font-weight: bolder;
+        }
+
+        a:hover {
+            background-color: rgb(225, 177, 44);
+            color: black;
+            font-weight: bolder;
+            text-decoration: none;
+        }
+
+        h1:hover {
+            background-color: rgb(71, 44, 225);
+            color: white;
+            font-weight: bolder;
+            text-decoration: none;
+            border-radius: 0.5em;
+            padding: 0.5em;
+            width: 200px;
+
+            animation: rotate-center 0.6s ease-in-out both
+        }
+
+        input[type=text]:focus {
+            border: 2px solid rgb(71, 44, 225);
+            font-weight: bolder;
+            background-color: rgb(71, 44, 225);
+            color: #fff;
+        }
+
+        @-webkit-keyframes rotate-center {
+            0% {
+                -webkit-transform: rotate(0);
+                transform: rotate(0);
+            }
+
+            100% {
+                -webkit-transform: rotate(360deg);
+                transform: rotate(360deg);
+            }
+        }
+
+        @keyframes rotate-center {
+            0% {
+                -webkit-transform: rotate(0);
+                transform: rotate(0);
+            }
+
+            100% {
+                -webkit-transform: rotate(360deg);
+                transform: rotate(360deg);
+            }
+        }
+
+        @font-face {
+            font-family: snow;
+            src: url('/assets/fonts/SnowtopCaps.otf');
+        }
+
+        @font-face {
+            font-family: fire;
+            src: url('/assets/fonts/CrushNBurn-Regular.otf');
+        }
+
+        h1 {
+            font-family: fire;
+            font-size: 3em;
+        }
+
+        ul li a {
+            font-family: snow;
+        }
+
+        /* Pseudo Element */
+        p::first-letter {
+            font-family: snow;
+            color: rgb(71, 44, 225);
+            font-size: 3em;
+        }
+
+        .change-font {
+            font-family: snow;
+            color: rgb(71, 44, 225);
+            font-size: 3em;
+        }
+
+        h3::first-line {
+            font-family: snow;
+            color: rgb(71, 44, 225);
+            font-size: 3em;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- ul>(li>a{Page $})*3 -->
+    <h3>Navigation Menu</h3>
+    <ul>
+        <li><a href="https://google.com" target="_blank">Page 1</a></li>
+        <li><a href="https://w3schools.com">Page 2</a></li>
+        <li><a href="https://freecodecamp.com">Page 3</a></li>
+    </ul>
+
+    <!-- h1{Form}+form>.form-group>label{Full Name}+input[type=text] -->
+    <h1>Form</h1>
+    <p>fill <span class="change-font">f</span>orm</p>
+    <form action="">
+        <div class="form-group">
+            <label for="first_name">First Name</label>
+            <input type="text" autofocus>
+        </div>
+        <div class="form-group">
+            <label for="last_name">Last Name</label>
+            <input type="text">
+        </div>
+    </form>
+</body>
+
+</html>

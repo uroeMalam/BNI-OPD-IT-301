@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Learning HTML</title>
+    <!-- Eksternal CSS bisa menggunakan file terpisah / url -->
+    <!-- link:css -->
+    <link rel="stylesheet" href="assets/css/style.css">
+
+    <!-- Internal CSS -->
+    <style>
+        /* Konsep penulisan css
+          - selector {property: value;} 
+            a. selector : elemen apa yang mau di modifikasi / diubah
+            selector bisa 
+            1. class (<h1 class="heading1"></h1) -> pemanggilannya .heading1 {}
+                - sifatnya reusable bisa digunakan di elemen lain
+                - penulisan menggunakan tanda titik / dot
+            2. ID (<h1 id="heading1"></h1>) -> pemanggilannya #heading1 {}
+                - ID itu unik 
+                - Hanya digunakan pada 1 elemen
+            3. tag html (<p></p>) -> pemanggilannya p {}
+            4. tag beserta attribute nya (<input type="text">) 
+                pemanggilannya input[type=text] {}
+         - property : fungsi yang sudah sediakan oleh css (font-size, color, dsb)
+         - value : nilai yang digunakan berdasarkan property yang digunakn
+                contoh : font-size -> 1em, color #000000 / black
+        */
+
+        h1 {
+            color: #44bd32;
+            /* Value warna 
+                1. hexa (#44bd32) 
+                2. rgb (rgb(68, 189, 50))
+                3. hsl (hsl(88, 100%, 50%))
+                4. color name (red, green, dsb)
+             */
+            background-color: #0b0b0b;
+            text-decoration: underline;
+        }
+
+        #header {
+            width: 75em;
+            height: 15em;
+            background-color: lime;
+        }
+
+        /* Child Selector */
+        /* #header > p {
+            color: #ede6e6;
+        } */
+
+        #header p {
+            color: #ede6e6;
+        }
+
+        /* Adjacent Selector */
+        h1 + p + p + p {
+            color: #44bd32;
+            font-weight: bolder;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- .wrapper>.header+#content>p{Content} -->
+    <div class="wrapper">
+        <div id="header">
+            <p>Header</p>
+        </div>
+        <div id="content">
+            <!-- h1{Heading 1}+p*3{Paragraph $} -->
+            <!-- Pairing Tag : ada tag pembuka & penutup -->
+            <h1 class="border-round paragraf">Heading 1</h1>
+            <p class="paragraf border-round">paragraf 1</p>
+            <p class="paragraf border-round">paragraf 2</p>
+            <p class="paragraf border-round">paragraf 3</p>
+
+            <!-- Single Tag -->
+            <!-- br+img[src].img-border#img-rounded+p{Image} -->
+            <br>
+            <img src="assets/img/img1.avif" alt="Nature" class="img-border" id="img-rounded">
+
+            <p>Biodata</p>
+            <!-- form[method=post]>(div.form-group>label{Name}+input[type=text]+br)*3+button[type=submit]{Submit} -->
+            <form action="" method="post">
+                <div class="form-group">
+                    <label for="">Name</label>
+                    <input type="text" class="border-round adjust-input-text">
+                </div>
+                <br>
+                <div class="form-group">
+                    <label for="">Email</label>
+                    <input type="email" class="border-round adjust-input-text">
+                </div>
+                <br>
+                <div class="form-group">
+                    <label for="">Name</label>
+                    <input type="text" class="border-round adjust-input-text">
+                </div>
+                <br>
+                <button type="submit">Submit</button>
+            </form>
+
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+                Iste dolorum ipsum sunt nesciunt nemo explicabo non ad id alias? Nulla voluptas, 
+                adipisci in vel laborum excepturi dolorem accusantium temporibus nisi.</p>
+        </div>
+    </div>
+</body>
+
+</html>
